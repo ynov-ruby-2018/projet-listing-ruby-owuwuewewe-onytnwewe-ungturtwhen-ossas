@@ -29,6 +29,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
+# gem for auth
+gem 'devise'
+# gem for translate website
+gem 'route_translator'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -43,14 +48,26 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  # Debug Test for VSCode
+    gem 'ruby-debug-ide'
+    gem 'debase'
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem 'launchy'
+  gem 'minitest'
+  gem 'minitest-focus'
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
+  gem 'minitest-matchers'
+  gem 'minitest-metadata'
+  gem 'minitest-profiler'
+  gem 'capybara-email'
+  gem 'warden'
+  gem 'timecop'
+  gem 'action-cable-testing'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
