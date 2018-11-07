@@ -31,3 +31,12 @@
 
 fr:
   hello: "Hello world"
+  search: "Rechercher"
+  login: "Se Connecter"
+  logout: "Se Deconnecter"
+  lang: "Langue"
+  title: "Listing"
+  homepage:
+    title: "Vous allez trouver"
+    create_button: "Créer mon annonce"
+

@@ -13,4 +13,47 @@
  *= require_self
  *= require main
  */
-/*@import "materialize";*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.panel {
+    position: relative;
+    max-width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.panel {
+    color: white;
+}
+
+.panel > img {
+    max-width: 100vw;
+    width: auto;
+    min-height: 100vh;
+}
+
+.panel > div {
+    position: absolute;
+    top: 35%;
+    bottom: 45%;
+    right: 20%;
+    left: 20%;
+}
+
+.flex {
+    display: flex !important;
+}
+
+.flex-middle {
+    align-items: center;
+    justify-content: center;
+}

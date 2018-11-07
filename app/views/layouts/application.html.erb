@@ -17,52 +17,6 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-    * {
-      font-family: 'Roboto', sans-serif;
-    }
-
-    nav {
-      background-color: rgba(20, 20, 20, 0.2);
-    }
-
-    body {
-      overflow-x: hidden;
-    }
-
-    .panel {
-      position: relative;
-      width: 100vw;
-      text-align: center;
-    }
-
-    .panel {
-      color: white;
-    }
-
-    .panel > img {
-      max-width: 100vw;
-    }
-
-    .panel > div {
-      position: absolute;
-      top: 45%;
-      bottom: 45%;
-      right: 20%;
-      left: 20%;
-    }
-
-    .flex {
-      display: flex !important;
-    }
-
-    .flex-middle {
-      align-items: baseline;
-      align-self: center;
-    }
-  </style>
 </head>
 
 <body>
@@ -78,17 +32,23 @@
   </ul>
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Listings</a>
+      <%= link_to t('title'), root_path, class: "brand-logo" %>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Login</a></li>
+        <li>
+          <% if current_user.nil? %>
+            <%= link_to t('login'), new_user_session_path %>
+          <% else %>
+            <%= link_to t('logout'), destroy_user_session_path %>
+          <% end %>
+        </li>
         <li>
           <a class="dropdown-trigger" href="#!" data-target="dropdown1">
-            Dropdown<i class="material-icons right">arrow_drop_down</i>
+            <%=t('lang') %><i class="material-icons right">arrow_drop_down</i>
           </a>
         </li>
         <li>
           <button class="btn green">
-            Create my listing
+            <%=t('homepage.create_button') %>
           </button>
         </li>
       </ul>

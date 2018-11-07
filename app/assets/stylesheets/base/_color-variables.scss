@@ -330,9 +330,14 @@ $shades: (
   "transparent":  transparent
 );
 
+$main-colors: (
+        "base":       #222222,
+        "secondary":  #555555
+);
+
 $colors: (
   "materialize-red": $materialize-red,
-  "main-color": $materialize-red,
+  "main-color": $main-colors,
   "red": $red,
   "pink": $pink,
   "purple": $purple,

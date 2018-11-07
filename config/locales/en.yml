@@ -31,3 +31,11 @@
 
 en:
   hello: "Hello world"
+  search: "Search"
+  login: "Sign in"
+  logout: "Sign out"
+  lang: "Lang"
+  title: "Listing"
+  homepage:
+    title: "You're Going to find"
+    create_button: "Create My Listing"

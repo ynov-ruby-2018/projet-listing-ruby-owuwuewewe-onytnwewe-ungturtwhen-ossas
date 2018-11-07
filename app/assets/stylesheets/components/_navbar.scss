@@ -12,10 +12,10 @@ nav {
       line-height: normal;
     }
   }
-
+  padding: 0 10px;
   color: $navbar-font-color;
   @extend .z-depth-1;
-  background-color: $primary-color;
+  background-color: rgba(20, 20, 20, 0.2);
   width: 100%;
   height: $navbar-height-mobile;
   line-height: $navbar-line-height-mobile;
