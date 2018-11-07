@@ -1,15 +1,111 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Listing</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Listing Ocase ++</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+    * {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    nav {
+      background-color: rgba(20, 20, 20, 0.2);
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .panel {
+      position: relative;
+      width: 100vw;
+      text-align: center;
+    }
+
+    .panel {
+      color: white;
+    }
+
+    .panel > img {
+      max-width: 100vw;
+    }
+
+    .panel > div {
+      position: absolute;
+      top: 45%;
+      bottom: 45%;
+      right: 20%;
+      left: 20%;
+    }
+
+    main {
+      margin-top: -64px;
+    }
+
+      .flex{
+        display: flex !important;
+      }
+      .flex-middle{
+        align-items: baseline;
+        align-self: center;
+      }
+  </style>
+</head>
+
+<body>
+
+<div class="navbar-fixed">
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!" class="flex flex-middle"><img height="24px" width="24px" src="assets/EN.png"><span class="fs-24">EN</span></a></li>
+    <li><a href="#!" class="flex flex-middle"><img height="24px" width="24px" src="assets/FR.png"><span class="fs-24">FR</span></a></li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Listings</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Login</a></li>
+        <li>
+          <a class="dropdown-trigger" href="#!" data-target="dropdown1">
+            Dropdown<i class="material-icons right">arrow_drop_down</i>
+          </a>
+        </li>
+        <li>
+          <button class="btn green">
+            Create my listing
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <%= yield %>
+</main>
+
+<script>
+
+    $(document).ready(function () {
+        $(".dropdown-trigger").dropdown();
+        $('select').formSelect();
+    });
+</script>
+</body>
 </html>
