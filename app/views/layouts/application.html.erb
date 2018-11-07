@@ -54,17 +54,14 @@
       left: 20%;
     }
 
-    main {
-      margin-top: -64px;
+    .flex {
+      display: flex !important;
     }
 
-      .flex{
-        display: flex !important;
-      }
-      .flex-middle{
-        align-items: baseline;
-        align-self: center;
-      }
+    .flex-middle {
+      align-items: baseline;
+      align-self: center;
+    }
   </style>
 </head>
 
@@ -72,8 +69,12 @@
 
 <div class="navbar-fixed">
   <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!" class="flex flex-middle"><img height="24px" width="24px" src="assets/EN.png"><span class="fs-24">EN</span></a></li>
-    <li><a href="#!" class="flex flex-middle"><img height="24px" width="24px" src="assets/FR.png"><span class="fs-24">FR</span></a></li>
+    <li>
+      <a href="#!" class="flex flex-middle"><img height="24px" width="24px" src="assets/EN.png"><span class="fs-24">EN</span></a>
+    </li>
+    <li>
+      <a href="#!" class="flex flex-middle"><img height="24px" width="24px" src="assets/FR.png"><span class="fs-24">FR</span></a>
+    </li>
   </ul>
   <nav>
     <div class="nav-wrapper">
