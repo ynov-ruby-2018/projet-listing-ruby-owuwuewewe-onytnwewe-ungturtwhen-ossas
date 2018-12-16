@@ -1,0 +1,20 @@
+<h2>Articles : </h2>
+<div class="row">
+  <% @articles.each do |article| %>
+    <%#raise article.inspect %>
+    <div class="col s6 m4 l3">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title"><%= link_to article.title, article_path(article.id) %></span>
+          <p>
+            <%= article.content %>
+          </p>
+
+          <div class="chip blue darken-4 white-text">
+            <%= article.category.name %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

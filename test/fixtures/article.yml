@@ -1,0 +1,22 @@
+
+one:
+  id: 1
+  title: "Article 1"
+  content: "Description 1 "
+  price: "99.99"
+  user_id: 1
+  category_id: 1
+two:
+  id: 2
+  title: "Article 2"
+  content: "Description 2"
+  price: "99.99"
+  user_id: 1
+  category_id: 2
+three:
+  id: 3
+  title: "Article 3"
+  content: "Description 3"
+  price: "99.99"
+  user_id: 1
+  category_id: 3

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   localized do
     root to: 'visitor#index'
 
+    resources :articles
+
     devise_for :users
   end
 end

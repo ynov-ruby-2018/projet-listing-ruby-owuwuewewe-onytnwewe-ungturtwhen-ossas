@@ -1,0 +1,25 @@
+<div class="input-field">
+  <%= text_field_tag 'article[title]', @post.title, class: '' %>
+  <label>Title</label>
+</div>
+
+
+<div class="input-field">
+  <%= text_area_tag 'article[content]', @post.content, class: 'materialize-textarea' %>
+  <label>Content</label>
+</div>
+
+<div class="input-field col s12">
+  <select name="post[category_id]">
+    <% Category.all.each do |category| %>
+      <option value="<%= category.id %>"><%= category.name %></option>
+    <% end %>
+  </select>
+  <label>Category</label>
+</div>
+
+<label>Image </label>
+<%=file_field_tag 'post[picture]' %>
+
+<br>
+<%= submit_tag 'Save', class: 'btn waves-effect waves-light' %>
