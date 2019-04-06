@@ -30,12 +30,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 fr:
-  hello: "Hello world"
+  hello: "Bienvenue sur le site"
   search: "Rechercher"
   login: "Se Connecter"
-  logout: "Se Deconnecter"
-  lang: "Langue"
+  logout: "Deconnexion"
+  lang: "Langues"
   title: "Listing"
+  articles_list: "Liste des articles"
+  category: "Catégories :"
+  show_article: "Voir l'article"
   homepage:
     title: "Vous allez trouver"
     create_button: "Créer mon annonce"

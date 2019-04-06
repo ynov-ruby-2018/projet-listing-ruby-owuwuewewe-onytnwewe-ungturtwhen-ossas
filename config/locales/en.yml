@@ -30,12 +30,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Welcome to the site"
   search: "Search"
   login: "Sign in"
   logout: "Sign out"
-  lang: "Lang"
+  lang: "Langs"
   title: "Listing"
+  show_article: "show article"
+  category: "Category :"
+  articles_list: "List of articles"
   homepage:
     title: "You're Going to find"
     create_button: "Create My Listing"
