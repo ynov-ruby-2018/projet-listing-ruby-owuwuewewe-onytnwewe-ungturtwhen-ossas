@@ -40,9 +40,7 @@
 @import "components/datepicker";
 @import "components/timepicker";
 
-.centerLogin {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+// Custom Components
+@import "components/custom/login";
+@import "components/custom/error";
+@import "components/custom/list";

@@ -39,6 +39,7 @@ en:
   show_article: "show article"
   category: "Category :"
   articles_list: "List of articles"
+  profile: "My Profil"
   homepage:
     title: "You're Going to find"
     create_button: "Create My Listing"
@@ -48,3 +49,19 @@ en:
     Forgot: "Forgot your password?"
     Confirmation: "Didn't receive confirmation instructions?"
     Unlock: "Didn't receive unlock instructions?"
+    reset_password: "Send me instructions"
+  article_devise:
+    title_page_create: "Creation of the article"
+    title_page_update: "Editing the article"
+    title: "Title of the article"
+    category: "Category of the article"
+    content: "Description of the item"
+    price: "Item price"
+    send: "Send the article"
+    update: "Update the article"
+    money: "$"
+  view_devise:
+    title_login: "Page de connexion"
+    title_register: "Page de connexion"
+    title_forgot: "Forgot your password?"
+

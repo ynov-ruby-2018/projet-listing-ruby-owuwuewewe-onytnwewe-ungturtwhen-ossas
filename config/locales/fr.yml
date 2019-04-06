@@ -39,6 +39,7 @@ fr:
   articles_list: "Liste des articles"
   category: "Catégories :"
   show_article: "Voir l'article"
+  profile: "Mon Profile"
   homepage:
     title: "Vous allez trouver"
     create_button: "Créer mon annonce"
@@ -48,4 +49,19 @@ fr:
     Forgot: "Mot de passe oublié ?"
     Confirmation: "Vous n'avez pas reçu d'instructions de confirmation ?"
     Unlock: "Vous n'avez pas reçu d'instructions de déverrouillage ?"
+    reset_password: "Envoyez-moi les instructions"
+  article_devise:
+    title_page_create: "Création de l'article"
+    title_page_update: "Edition de l'article"
+    title: "Titre de l'article"
+    category: "Catégorie de l'article"
+    content: "Description de l'article"
+    price: "Prix de l'article"
+    send: "Envoyer l'article"
+    update: "Mettre à jour l'article"
+    money: "€"
+  view_devise:
+    title_login: "Page de connexion"
+    title_register: "Page de connexion"
+    title_forgot: "Mot de passe oublié ?"
 

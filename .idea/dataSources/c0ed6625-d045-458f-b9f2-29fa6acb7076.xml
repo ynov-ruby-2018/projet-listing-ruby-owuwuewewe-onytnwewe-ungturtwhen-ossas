@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="development">
-  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.11">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.15">
     <root id="1">
       <ServerVersion>3.25.1</ServerVersion>
     </root>
@@ -60,12 +60,10 @@
 record_id
 name
 blob_id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="22" parent="6" name="index_active_storage_attachments_on_blob_id">
       <ColNames>blob_id</ColNames>
-      <ColumnCollations></ColumnCollations>
     </index>
     <key id="23" parent="6">
       <ColNames>id</ColNames>
@@ -112,7 +110,6 @@ blob_id</ColNames>
     </column>
     <index id="32" parent="7" name="index_active_storage_blobs_on_key">
       <ColNames>key</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="33" parent="7">
@@ -141,7 +138,6 @@ blob_id</ColNames>
     <index id="38" parent="8" name="sqlite_autoindex_ar_internal_metadata_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>key</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="39" parent="8">
@@ -211,7 +207,6 @@ blob_id</ColNames>
     <index id="53" parent="11" name="sqlite_autoindex_schema_migrations_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>version</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="54" parent="11">
@@ -300,12 +295,10 @@ blob_id</ColNames>
     </column>
     <index id="73" parent="14" name="index_users_on_email">
       <ColNames>email</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <index id="74" parent="14" name="index_users_on_reset_password_token">
       <ColNames>reset_password_token</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="75" parent="14">
