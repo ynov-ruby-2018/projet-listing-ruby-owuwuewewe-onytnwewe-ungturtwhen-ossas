@@ -42,3 +42,9 @@ en:
   homepage:
     title: "You're Going to find"
     create_button: "Create My Listing"
+  link_devise:
+    Log_in: "Log in"
+    Sign_up: "Sign up"
+    Forgot: "Forgot your password?"
+    Confirmation: "Didn't receive confirmation instructions?"
+    Unlock: "Didn't receive unlock instructions?"

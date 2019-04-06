@@ -42,4 +42,10 @@ fr:
   homepage:
     title: "Vous allez trouver"
     create_button: "Créer mon annonce"
+  link_devise:
+    Log_in: "Connexion"
+    Sign_up: "S'inscrire"
+    Forgot: "Mot de passe oublié ?"
+    Confirmation: "Vous n'avez pas reçu d'instructions de confirmation ?"
+    Unlock: "Vous n'avez pas reçu d'instructions de déverrouillage ?"
 
