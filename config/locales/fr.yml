@@ -44,6 +44,7 @@ fr:
     create_button: "Créer mon annonce"
     compte: "Mon compte"
     profile: "Profile"
+    dashboard: "Tableau de bord"
   link_devise:
     Log_in: "Connexion"
     Sign_up: "S'inscrire"

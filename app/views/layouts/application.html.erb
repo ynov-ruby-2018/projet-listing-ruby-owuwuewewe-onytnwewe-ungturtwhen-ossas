@@ -24,18 +24,26 @@
 <div class="navbar-fixed">
   <ul id="dropdown1" class="dropdown-content">
     <li>
-        <%= link_to image_tag('/assets/EN.png', width: 20), {:locale => 'en'} %>
+      <%= link_to image_tag('/assets/EN.png', width: 20), {:locale => 'en'} %>
     </li>
     <li>
-        <%= link_to image_tag('/assets/FR.png', width: 20), {:locale => 'fr'} %>
+      <%= link_to image_tag('/assets/FR.png', width: 20), {:locale => 'fr'} %>
     </li>
   </ul>
   <ul id="dropdown2" class="dropdown-content">
     <li>
-      <%=  link_to t('homepage.profile'), profil_visitor_path %>
+      <%= link_to t('homepage.profile') %>
     </li>
+    <% if current_user.nil? %>
+    <% else %>
+      <% if current_user.is_admin? %>
+        <li>
+          <%= link_to t('homepage.dashboard'), rails_admin_path %>
+        </li>
+      <% end %>
+    <% end %>
     <li>
-      <%= link_to t('logout'), destroy_user_session_path, :method => :delete   %>
+      <%= link_to t('logout'), destroy_user_session_path, :method => :delete %>
     </li>
   </ul>
   <nav>
@@ -50,15 +58,14 @@
         <li>
           <%= link_to t('articles_list'), articles_path %>
         </li>
-        <li>
-          <% if current_user.nil? %>
-          <% else %>
+        <% if current_user.nil? %>
+        <% else %>
+          <li>
             <button class="btn green">
               <%= link_to t('homepage.create_button'), new_article_path %>
             </button>
-          <% end %>
-
-        </li>
+          </li>
+        <% end %>
         <li>
           <% if current_user.nil? %>
             <%= link_to t('login'), new_user_session_path %>
@@ -74,7 +81,7 @@
 </div>
 
 <main>
-    <%= yield %>
+  <%= yield %>
 </main>
 
 <script>

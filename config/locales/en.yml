@@ -44,6 +44,7 @@ en:
     create_button: "Create My Listing"
     compte: "My account"
     profile: "Profil"
+    dashboard: "Dashboard"
   link_devise:
     Log_in: "Log in"
     Sign_up: "Sign up"
