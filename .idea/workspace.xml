@@ -13,7 +13,6 @@
       <change beforePath="$PROJECT_DIR$/../.ruby-version" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gemfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/user.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/user.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Rakefile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/assets/config/manifest.js" beforeDir="false" />
@@ -172,7 +171,7 @@
     <session id="930721332">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="3" />
@@ -615,16 +614,15 @@
       <workItem from="1541511282525" duration="543000" />
       <workItem from="1541511915903" duration="8621000" />
       <workItem from="1541578542796" duration="13000000" />
-      <workItem from="1544973785437" duration="164000" />
+      <workItem from="1544973785437" duration="774000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22328000" />
+    <option name="totallyTimeSpent" value="22938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="672" y="0" width="1255" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.241841" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
