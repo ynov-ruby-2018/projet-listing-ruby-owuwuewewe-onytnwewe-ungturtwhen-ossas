@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  localized do
 
-    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  localized do
 
     mount ActionCable.server => '/cable'
 
