@@ -55,7 +55,7 @@
           <% if current_user.nil? %>
             <%= link_to t('login'), new_user_session_path %>
           <% else %>
-            <%= link_to t('logout'), destroy_user_session_path  %>
+            <%= link_to t('logout'), destroy_user_session_path, :method => :delete   %>
           <% end %>
         </li>
       </ul>
@@ -64,9 +64,7 @@
 </div>
 
 <main>
-  <div class="container">
     <%= yield %>
-  </div>
 </main>
 
 <script>
