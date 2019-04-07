@@ -1,53 +1,45 @@
-<div class="container">
-  <div class="row">
-    <% @articles.each do |article| %>
-      <div class="col s4 m4 l4">
-        <!--  <div class="card">-->
-        <!--    <div class="card-image waves-effect waves-block waves-light">-->
-        <!--      <a href="#" class="btn-floating btn-large btn-price waves-effect waves-light  pink accent-2"><%#= article.price %></a>-->
-
-        <!--      <a href="#"><img src="data:image/png;base64,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" alt="product-img">-->
-        <!--      </a>-->
-        <!--    </div>-->
-        <!--    <ul class="card-action-buttons">-->
-        <!--      <li><a class="btn-floating waves-effect waves-light red accent-2"><i class="mdi-action-favorite"></i></a>-->
-        <!--      </li>-->
-        <!--      <li><a class="btn-floating waves-effect waves-light light-blue"><i class="mdi-action-info activator"></i></a>-->
-        <!--      </li>-->
-        <!--    </ul>-->
-        <!--    <div class="card-content">-->
-
-        <!--      <div class="row">-->
-        <!--        <div class="col s8">-->
-        <!--          <p class="card-title grey-text text-darken-4">-->
-        <!--            <a href="#" class="grey-text text-darken-4"><%#= link_to article.title, article_path(article.id) %></a>-->
-        <!--          </p>-->
-        <!--        </div>-->
-        <!--      </div>-->
-        <!--    </div>-->
-        <!--    <div class="card-reveal">-->
-        <!--      <span class="card-title grey-text text-darken-4"><i class="mdi-navigation-close right"></i><%#= link_to article.title, article_path(article.id) %></span>-->
-        <!--      <p><%#= article.content %></p>-->
-        <!--      <span><%#= link_to t('category') %></span> <%#= article.category.name %>-->
-        <!--    </div>-->
-        <!--  </div>-->
-        <!--</div>-->
-
-        <div class="card">
-          <div class="card-image">
-            <span style="position: absolute; left: 10px; top:10px; z-index: 100;" class="new badge blue"><%= article.price %> <%= link_to t('article_devise.money') %></span>
-            <img src="https://img.igen.fr/2018/4/macgpic-1523612224-30206656631734-sc-jpt.jpg">
-            <a class="btn-floating halfway-fab waves-effect waves-light red" style="right: 20px"><i class="material-icons">remove_red_eye</i></a>
-            <a class="btn-floating halfway-fab waves-effect waves-light red" style="right: 70px"><i class="material-icons">add</i></a>
+<div class="row">
+  <% @articles.each do |article| %>
+    <div class="col s12 m12">
+      <div class="card">
+        <div class="row">
+          <div class="col s12" style="margin: 1rem">
+            <h5>
+              <%= link_to article.title, article_path(article.id) %>
+            </h5>
           </div>
-          <div class="card-content">
-            <span style="color: black; font-size: medium" class="card-title"><%= link_to article.title, article_path(article.id) %></span>
-            <p class="listDescription"><%= article.content %></p>
-            <span><%= link_to t('category') %></span> <%= article.category.name %>
+          <div class="col s12" style="margin: 1rem">
+              DATE - <span class="chip blue darken-4 white-text"> <%= article.category.name %> </span>
+          </div>
+          <div class="col s12 clearfix">
+            <img src="https://img.igen.fr/2018/4/macgpic-1523612224-30206656631734-sc-jpt.jpg" class="img1">
+            <div style="padding: 1rem">
+              <%= article.content %>
+              <div style="padding: 1rem">
+                <%= article.price %> <%= link_to t('article_devise.money') %>
+                <button style="float: right">
+                  CONTACT
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
+
+<style>
+  .img1 {
+    float: left;
+    width: 20rem;
+    height: 20rem;
+    margin: 1rem;
+  }
+
+  .clearfix {
+    overflow: auto;
+  }
+
+
+</style>
