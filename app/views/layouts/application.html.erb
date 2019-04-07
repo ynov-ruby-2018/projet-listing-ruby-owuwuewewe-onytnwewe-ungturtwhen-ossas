@@ -32,7 +32,10 @@
   </ul>
   <ul id="dropdown2" class="dropdown-content">
     <li>
-      <%= link_to t('homepage.profile') %>
+      <%= link_to t('homepage.account') %>
+    </li>
+    <li>
+      <%= link_to t('homepage.contacts') %>
     </li>
     <% if current_user.nil? %>
     <% else %>
@@ -42,38 +45,37 @@
         </li>
       <% end %>
     <% end %>
-    <li>
-      <%= link_to t('logout'), destroy_user_session_path, :method => :delete %>
-    </li>
   </ul>
   <nav>
     <div class="nav-wrapper">
       <%= link_to t('title'), root_path, class: "brand-logo" %>
       <ul class="right hide-on-med-and-down">
+        <% if current_user.nil? %>
+          <li>
+            <%= link_to t('login'), new_user_session_path %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to t('logout'), destroy_user_session_path, :method => :delete %>
+          </li>
+        <% end %>
+        <li>
+          <% if current_user.nil? %>
+          <% else %>
+            <a class="dropdown-trigger" href="#!" data-target="dropdown2">
+              <%= t('homepage.compte') %><i class="material-icons right">arrow_drop_down</i>
+            </a>
+          <% end %>
+        </li>
         <li>
           <a class="dropdown-trigger" href="#!" data-target="dropdown1">
             <%= t('lang') %><i class="material-icons right">arrow_drop_down</i>
           </a>
         </li>
         <li>
-          <%= link_to t('articles_list'), articles_path %>
-        </li>
-        <% if current_user.nil? %>
-        <% else %>
-          <li>
-            <button class="btn green">
-              <%= link_to t('homepage.create_button'), new_article_path %>
-            </button>
-          </li>
-        <% end %>
-        <li>
-          <% if current_user.nil? %>
-            <%= link_to t('login'), new_user_session_path %>
-          <% else %>
-            <a class="dropdown-trigger" href="#!" data-target="dropdown2">
-              <%= t('homepage.compte') %><i class="material-icons right">arrow_drop_down</i>
-            </a>
-          <% end %>
+          <button class="btn green">
+            <%= link_to t('homepage.create_button'), new_article_path %>
+          </button>
         </li>
       </ul>
     </div>

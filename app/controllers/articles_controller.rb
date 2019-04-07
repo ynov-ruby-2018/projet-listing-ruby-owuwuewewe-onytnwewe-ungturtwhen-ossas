@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
@@ -47,10 +46,10 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:post).permit(
-      :title,
-      :content,
-      :price,
-      :category_id
+        :title,
+        :content,
+        :price,
+        :category_id
     ).merge(user_id: current_user.id)
   end
 end
