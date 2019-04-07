@@ -39,10 +39,11 @@ fr:
   articles_list: "Liste des articles"
   category: "Catégories :"
   show_article: "Voir l'article"
-  profile: "Mon Profile"
   homepage:
-    title: "Vous allez trouver"
+    title: "Que cherche vous ?"
     create_button: "Créer mon annonce"
+    compte: "Mon compte"
+    profile: "Profile"
   link_devise:
     Log_in: "Connexion"
     Sign_up: "S'inscrire"

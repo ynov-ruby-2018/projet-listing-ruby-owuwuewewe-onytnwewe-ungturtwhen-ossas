@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  mount ActionCable.server => '/cable'
-
   localized do
+
+    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+    mount ActionCable.server => '/cable'
+
     root to: 'visitor#index'
 
     resources :articles

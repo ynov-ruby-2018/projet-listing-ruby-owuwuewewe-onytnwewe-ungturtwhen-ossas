@@ -30,6 +30,14 @@
         <%= link_to image_tag('/assets/FR.png', width: 20), {:locale => 'fr'} %>
     </li>
   </ul>
+  <ul id="dropdown2" class="dropdown-content">
+    <li>
+      <%=  link_to t('homepage.profile'), profil_visitor_path %>
+    </li>
+    <li>
+      <%= link_to t('logout'), destroy_user_session_path, :method => :delete   %>
+    </li>
+  </ul>
   <nav>
     <div class="nav-wrapper">
       <%= link_to t('title'), root_path, class: "brand-logo" %>
@@ -55,7 +63,9 @@
           <% if current_user.nil? %>
             <%= link_to t('login'), new_user_session_path %>
           <% else %>
-            <%= link_to t('logout'), destroy_user_session_path, :method => :delete   %>
+            <a class="dropdown-trigger" href="#!" data-target="dropdown2">
+              <%= t('homepage.compte') %><i class="material-icons right">arrow_drop_down</i>
+            </a>
           <% end %>
         </li>
       </ul>

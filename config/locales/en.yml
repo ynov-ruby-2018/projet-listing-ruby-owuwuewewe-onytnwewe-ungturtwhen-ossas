@@ -39,10 +39,11 @@ en:
   show_article: "show article"
   category: "Category :"
   articles_list: "List of articles"
-  profile: "My Profil"
   homepage:
     title: "You're Going to find"
     create_button: "Create My Listing"
+    compte: "My account"
+    profile: "Profil"
   link_devise:
     Log_in: "Log in"
     Sign_up: "Sign up"
