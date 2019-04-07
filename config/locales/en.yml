@@ -30,12 +30,40 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Welcome to the site"
   search: "Search"
   login: "Sign in"
   logout: "Sign out"
-  lang: "Lang"
+  lang: "Langs"
   title: "Listing"
+  show_article: "show article"
+  category: "Category :"
+  articles_list: "List of articles"
   homepage:
     title: "You're Going to find"
     create_button: "Create My Listing"
+    compte: "My account"
+    profile: "Profil"
+    dashboard: "Dashboard"
+  link_devise:
+    Log_in: "Log in"
+    Sign_up: "Sign up"
+    Forgot: "Forgot your password?"
+    Confirmation: "Didn't receive confirmation instructions?"
+    Unlock: "Didn't receive unlock instructions?"
+    reset_password: "Send me instructions"
+  article_devise:
+    title_page_create: "Creation of the article"
+    title_page_update: "Editing the article"
+    title: "Title of the article"
+    category: "Category of the article"
+    content: "Description of the item"
+    price: "Item price"
+    send: "Send the article"
+    update: "Update the article"
+    money: "$"
+  view_devise:
+    title_login: "Page de connexion"
+    title_register: "Page de connexion"
+    title_forgot: "Forgot your password?"
+

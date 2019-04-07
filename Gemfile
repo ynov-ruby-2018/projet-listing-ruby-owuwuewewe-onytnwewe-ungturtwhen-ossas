@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 
 # gem for auth
 gem 'devise'
-gem 'rails_admin', '~>1.0'
+gem 'rails_admin'
 # gem for translate website
 gem 'route_translator'
 
