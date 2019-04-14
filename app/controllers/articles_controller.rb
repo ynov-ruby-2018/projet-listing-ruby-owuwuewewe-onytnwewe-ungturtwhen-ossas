@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 class ArticlesController < ApplicationController
+
   def index
-    @articles = Article.all
+    @articles = Article.search(params[:search])
   end
 
   def new
@@ -12,28 +13,8 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-  def create
-    @article = Article.new(article_params)
-
-    if @article.save
-      redirect_to artiles_path
-    else
-      # raise @post.errors.messages.inspect
-      render template: '/admin/posts/new'
-    end
-  end
-
   def edit
     @article = Post.find(params[:id])
-  end
-
-  def update
-    @article = Post.find(params[:id])
-    if @article.update_attributes(article_params)
-      redirect_to artiles_path
-    else
-      render template: '/admin/posts/' + params[:id]
-    end
   end
 
   def destroy
@@ -51,5 +32,9 @@ class ArticlesController < ApplicationController
         :price,
         :category_id
     ).merge(user_id: current_user.id)
+  end
+
+  def search_params
+    params.require(:articles).permit(:title, :content, :price, :category_id, :search)
   end
 end
