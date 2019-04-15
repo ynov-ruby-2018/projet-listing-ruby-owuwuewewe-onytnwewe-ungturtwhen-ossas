@@ -4,6 +4,11 @@ Rails.application.routes.draw do
     resources :articles
   end
 
+  scope :api, defaults: { format: :json } do
+    devise_for :users
+  end
+
+
 
   localized do
 
