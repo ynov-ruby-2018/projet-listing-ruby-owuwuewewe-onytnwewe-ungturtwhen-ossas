@@ -1,0 +1,34 @@
+<% @messages.each do |message| %>
+  <% if message.body %>
+    <div class="row">
+      <div class="col s12 m6 user_send">
+        <div class="card blue darken-1">
+          <div class="card-content white-text">
+            <span class="card-title"><%= message.user.email %></span>
+            <p><%= message.body %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+<%= form_for account_conversation_messages_path, method: :post do %>
+  <div class="field">
+    <%= text_area_tag :body, placeholder: "Your message" %>
+  </div>
+
+  <%= submit_tag "Send" %>
+<% end %>
+
+
+<%- if @message != current_user %>
+  <style>
+    .user_send{
+      margin-left: 50%;
+    }
+      .blue-grey{
+        background-color: white;
+      }
+  </style>
+<% end -%>
