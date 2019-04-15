@@ -1,34 +1,70 @@
-<% @messages.each do |message| %>
-  <% if message.body %>
-    <div class="row">
-      <div class="col s12 m6 user_send">
-        <div class="card blue darken-1">
-          <div class="card-content white-text">
-            <span class="card-title"><%= message.user.email %></span>
-            <p><%= message.body %></p>
+<div class="row">
+  <div style="
+  /* overflow-x: scroll; */
+      overflow: auto;
+      height: 35rem;
+      width: 100%;
+  ">
+    <% @messages.each do |message| %>
+      <% if message.body %>
+        <% if message.user_id === current_user %>
+          <div class="col s12 m12 user_send">
+            <div class="card blue darken-1">
+              <div class="card-content white-text">
+                <span class="card-title"><%= message.user.email %></span>
+                <p><%= message.body %></p>
+                <% if message.read %>
+                  READ
+                <% else %>
+                  NOT READ
+
+                <% end %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  <% end %>
-<% end %>
+        <% else %>
+          <div class="col s12 m12 white user_receive">
+            <div class="card blue darken-1">
+              <div class="card-content white-text">
+                <span class="card-title"><%= message.user.email %></span>
+                <p><%= message.body %></p>
+                <% if message.read %>
+                  READ
+                <% else %>
+                  NOT READ
 
-<%= form_for account_conversation_messages_path, method: :post do %>
-  <div class="field">
-    <%= text_area_tag :body, placeholder: "Your message" %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
+  <%= form_for @message, :url => {:action => "create"} do |f| %>
+    <div class="field">
+      <%= f.text_area :body, placeholder: "Your message" %>
+    </div>
 
-  <%= submit_tag "Send" %>
-<% end %>
+    <%= f.submit "Send" %>
+  <% end %>
 
+</div>
 
-<%- if @message != current_user %>
+<%- if @message.user_id != current_user %>
   <style>
-    .user_send{
-      margin-left: 50%;
+    .user_receive {
+      width: 30%;
+      margin-left: 70%;
     }
-      .blue-grey{
-        background-color: white;
-      }
+
+    .white {
+      background-color: white;
+    }
+
+    .user_send {
+      width: 30%;
+      margin-left: 0%;
+    }
   </style>
 <% end -%>

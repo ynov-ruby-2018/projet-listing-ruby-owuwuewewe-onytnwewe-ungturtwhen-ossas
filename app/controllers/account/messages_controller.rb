@@ -23,7 +23,7 @@ class Account::MessagesController < Account::AccountController
 
   private
   def message_params
-    params.permit(:body, :user_id)
+    params.require(:message).permit(:body, :user_id).merge(user_id: current_user.id)
   end
 end
 
