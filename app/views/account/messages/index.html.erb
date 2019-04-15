@@ -7,33 +7,33 @@
   ">
     <% @messages.each do |message| %>
       <% if message.body %>
-        <% if message.user_id === current_user %>
-          <div class="col s12 m12 user_send">
-            <div class="card blue darken-1">
+        <% if message.user_id === current_user.id %>
+          <div class="col s12 m12">
+            <div class="card blue darken-1 user_send">
               <div class="card-content white-text">
-                <span class="card-title"><%= message.user.email %></span>
-                <p><%= message.body %></p>
-                <% if message.read %>
-                  READ
+                <span class="card-title"><%= message.user.email %>  -
+                  <% if message.read %>
+                  <span class="badge green" style="color: black">lu</span>
                 <% else %>
-                  NOT READ
-
+                  <span class="badge red" style="color: black">Non lu</span>
                 <% end %>
+                </span>
+                <p><%= message.body %></p>
               </div>
             </div>
           </div>
         <% else %>
-          <div class="col s12 m12 white user_receive">
-            <div class="card blue darken-1">
+          <div class="col s12 m12">
+            <div class="card white darken-1 user_receive">
               <div class="card-content white-text">
-                <span class="card-title"><%= message.user.email %></span>
-                <p><%= message.body %></p>
-                <% if message.read %>
-                  READ
+                <span class="card-title"><%= message.user.email %>  -
+                  <% if message.read %>
+                  <span class="badge green" style="color: black">lu</span>
                 <% else %>
-                  NOT READ
-
+                  <span class="badge red" style="color: black">Non lu</span>
                 <% end %>
+                </span>
+                <p><%= message.body %></p>
               </div>
             </div>
           </div>
@@ -51,20 +51,24 @@
 
 </div>
 
-<%- if @message.user_id != current_user %>
-  <style>
-    .user_receive {
-      width: 30%;
-      margin-left: 70%;
-    }
+<style>
+  .user_receive {
+    width: 30% !important;
+    margin-left: 70% !important;
+  }
 
-    .white {
-      background-color: white;
-    }
+  .white {
+    background-color: darkblue !important;
+  }
 
-    .user_send {
-      width: 30%;
-      margin-left: 0%;
-    }
-  </style>
-<% end -%>
+  .user_send {
+    width: 30% !important;
+    margin-left: 0 !important;
+  }
+
+  .card .card-content {
+    padding: 10px;
+    border-radius: 0 0 2px 2px;
+    font-size: 10px;
+  }
+</style>

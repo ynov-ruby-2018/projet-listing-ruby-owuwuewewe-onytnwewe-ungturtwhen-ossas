@@ -281,6 +281,6 @@ en:
       short: "%d %b %I:%M %p"
     pm: pm
   account:
-    conversation: "My Contacts"
-    message: "My Messages"
+    conversation: "Inbox"
     compte: "My Compte"
+    ResetConv: "Restart your conversation"

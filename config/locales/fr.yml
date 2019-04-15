@@ -285,7 +285,7 @@ fr:
       short: "%d %b %Hh%M"
     pm: pm
   account:
-    conversation: "Mes Contacts"
-    message: "Mes Messages"
+    conversation: "Boîte de réception"
     compte: "Mon Compte"
+    ResetConv: "Reprendre votre conversation"
 
