@@ -24,3 +24,17 @@ Things you may want to cover:
 
 # ListingRuby
 Ruby
+
+# ListingRuby - API
+**Routes**
+Articles API
+```
+GET    /api/articles
+GET    /api/articles/:id
+POST   /api/articles 
+PATCH  /api/articles/:id                                                           api/articles#update
+PUT    /api/articles/:id                                                              api/articles#update
+DELETE /api/articles/:id
+```
+**Routes**
+Users API
