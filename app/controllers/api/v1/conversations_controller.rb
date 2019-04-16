@@ -6,8 +6,6 @@ class Api::V1::ConversationsController < Api::V1::ApiController
 
     @users = User.where.not(id: current_user.id)
     @conversations = Conversation.where("sender_id = ? OR receiver_id = ?", current_user.id, current_user.id)
-
-    render json: @conversations
   end
 
   def create
