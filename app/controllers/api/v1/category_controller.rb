@@ -7,7 +7,7 @@ class Api::V1::CategoryController < Api::V1::ApiController
 
   # GET /categories/1
   def show
-    render json: @category
+    @category = Category.find(params[:id])
   end
 
   # POST /categories
