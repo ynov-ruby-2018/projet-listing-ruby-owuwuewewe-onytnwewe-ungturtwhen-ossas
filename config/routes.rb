@@ -7,6 +7,9 @@ Rails.application.routes.draw do
       devise_scope :user do
         post '/authentication_tokens/create', to: "authentication_tokens#create"
       end
+      resources :conversations, only: [:index, :create] do
+        resources :messages, only: [:index, :create]
+      end
     end
   end
 

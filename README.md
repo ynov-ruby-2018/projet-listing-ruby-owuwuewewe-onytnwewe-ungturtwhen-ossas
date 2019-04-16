@@ -29,12 +29,12 @@ Ruby
 **Routes**
 Articles API
 ```
-GET    /api/articles
-GET    /api/articles/:id
-POST   /api/articles 
-PATCH  /api/articles/:id                                                           api/articles#update
-PUT    /api/articles/:id                                                              api/articles#update
-DELETE /api/articles/:id
+GET    /api/v1/articles
+GET    /api/v1/articles/:id
+POST   /api/v1/articles 
+PATCH  /api/v1/articles/:id                                                           
+PUT    /api/v1/articles/:id 
+DELETE /api/v1/articles/:id
 ```
 **Routes**
 Users API
