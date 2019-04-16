@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :articles
+      resources :category
       resources :users
       devise_scope :user do
         post '/authentication_tokens/create', to: "authentication_tokens#create"
