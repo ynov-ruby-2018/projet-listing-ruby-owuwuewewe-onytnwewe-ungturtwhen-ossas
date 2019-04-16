@@ -47,9 +47,6 @@ ActiveRecord::Schema.define(version: 2019_04_15_082043) do
     t.string "name"
   end
 
-<<<<<<< HEAD
-  create_table "users", options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
-=======
   create_table "conversations", force: :cascade do |t|
     t.integer "sender_id"
     t.integer "receiver_id"
@@ -69,7 +66,6 @@ ActiveRecord::Schema.define(version: 2019_04_15_082043) do
   end
 
   create_table "users", force: :cascade do |t|
->>>>>>> 1c7bef7f8a04bd1739e6f6d6a730712be10addb8
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "firstname"
