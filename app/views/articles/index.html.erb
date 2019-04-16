@@ -17,9 +17,13 @@
               <%= article.content %>
               <div style="padding: 1rem">
                 <%= article.price %> <%= link_to t('article_devise.money') %>
-                <button style="float: right">
-                  CONTACT
-                </button>
+                <% if article.user.id ===  current_user.id %>
+
+                  <% else %>
+                  <button style="float: right">
+                    <%= link_to "contact le vendeur", account_conversations_path(sender_id: current_user.id, receiver_id: article.user.id), method: :post %>
+                  </button>
+                  <% end %>
               </div>
             </div>
           </div>

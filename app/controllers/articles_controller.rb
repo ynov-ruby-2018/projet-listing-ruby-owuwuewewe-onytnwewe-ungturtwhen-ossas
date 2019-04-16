@@ -6,7 +6,15 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = Article.new
+
+    @user = current_user
+
+    if @user
+      @article = Article.new
+    else
+      redirect_to new_user_session_path
+    end
+
   end
 
   def create
@@ -17,8 +25,8 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to articles_path
     else
-       render template:'articles/new'
-       #@article.errors.messages.inspect
+      render template: 'articles/new'
+      #@article.errors.messages.inspect
     end
   end
 
@@ -40,7 +48,7 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article)
-        .permit(:title,:content,:price,:category_id,:user_id)
+        .permit(:title, :content, :price, :category_id, :user_id)
         .merge(user_id: current_user.id)
   end
 
