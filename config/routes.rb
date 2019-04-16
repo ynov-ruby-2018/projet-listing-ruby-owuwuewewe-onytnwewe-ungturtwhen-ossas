@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
   namespace :api do
-    resources :articles
+    namespace :v1 do
+      resources :articles
+      resources :users
+      devise_scope :user do
+        post '/authentication_tokens/create', to: "authentication_tokens#create"
+      end
+    end
   end
-
-  # scope :api, defaults: { format: :json } do
-  #   devise_for :users
-  # end
-
 
 
   localized do

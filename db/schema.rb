@@ -47,11 +47,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_082043) do
     t.string "name"
   end
 
-<<<<<<< Updated upstream
-  create_table "conversations", force: :cascade do |t|
-=======
   create_table "conversations", options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
->>>>>>> Stashed changes
     t.integer "sender_id"
     t.integer "receiver_id"
     t.datetime "created_at", null: false
@@ -69,11 +65,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_082043) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
-<<<<<<< Updated upstream
-  create_table "users", force: :cascade do |t|
-=======
   create_table "users", options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
->>>>>>> Stashed changes
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "firstname"

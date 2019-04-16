@@ -300,7 +300,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   debase
   devise
-  devise-jwt
+  devise-jwt (~> 0.5.9)
   duktape
   jbuilder (~> 2.5)
   launchy
