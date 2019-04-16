@@ -1,4 +1,6 @@
-class Api::ArticlesController < ApplicationController
+class Api::V1::ArticlesController < Api::V1::ApiController
+
+
 
   before_action :set_article, only: [:show, :update, :destroy]
   # GET /articles
@@ -14,9 +16,10 @@ class Api::ArticlesController < ApplicationController
 
   # POST /articles
   def create
+    before_action :authenticate_user!
     @article = Article.new(article_params)
     if @article.save
-      render json: @article, status: :created, location: api_article_url(@article)
+      render json: @article, status: :create
     else
       render json: @article.errors, status: :unprocessable_entity
     end
@@ -24,6 +27,7 @@ class Api::ArticlesController < ApplicationController
 
   # PATCH/PUT /articles/1
   def update
+    before_action :authenticate_user!
     if @article.update(article_params)
       render json: @article
     else
@@ -33,6 +37,7 @@ class Api::ArticlesController < ApplicationController
 
   # DELETE /articles/1
   def destroy
+    before_action :authenticate_user!
     @article.destroy
   end
 

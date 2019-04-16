@@ -1,22 +1,21 @@
-
 one:
+  id: 1
   title: "Article 1"
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu efficitur mauris, eget mollis quam. Maecenas nec erat ut nisi aliquam semper nec sit amet ex. Nulla facilisi. Nam pretium tellus id ex feugiat, id convallis sapien laoreet. Nam sed varius lorem. Vestibulum ultrices laoreet tempus. Vestibulum blandit tortor ut feugiat sagittis. Integer tempor mauris id fermentum venenatis. Sed finibus, arcu in consequat tempus, leo risus imperdiet quam, in hendrerit augue nunc eu magna. Sed laoreet egestas elit, vitae rhoncus augue fermentum id. Aenean sodales lectus sit amet varius aliquet. Sed convallis imperdiet mi vel congue.
-Mauris a posuere ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam in est quis risus pretium condimentum vestibulum non leo. Vivamus est elit, aliquam quis vestibulum eget, venenatis nec tortor. Aliquam erat volutpat. Duis facilisis hendrerit nisl id imperdiet. Proin neque neque, malesuada a luctus non, cursus a quam. Quisque eleifend facilisis cursus. Nulla non laoreet nunc, a maximus nibh. Praesent vehicula tempor massa. Integer scelerisque enim ac leo venenatis interdum."
+  content: "Description 1 "
   price: "99.99"
-  user_id: one
-  category_id: one
+  user_id: 1
+  category_id: 1
 two:
+  id: 2
   title: "Article 2"
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu efficitur mauris, eget mollis quam. Maecenas nec erat ut nisi aliquam semper nec sit amet ex. Nulla facilisi. Nam pretium tellus id ex feugiat, id convallis sapien laoreet. Nam sed varius lorem. Vestibulum ultrices laoreet tempus. Vestibulum blandit tortor ut feugiat sagittis. Integer tempor mauris id fermentum venenatis. Sed finibus, arcu in consequat tempus, leo risus imperdiet quam, in hendrerit augue nunc eu magna. Sed laoreet egestas elit, vitae rhoncus augue fermentum id. Aenean sodales lectus sit amet varius aliquet. Sed convallis imperdiet mi vel congue.
-Mauris a posuere ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam in est quis risus pretium condimentum vestibulum non leo. Vivamus est elit, aliquam quis vestibulum eget, venenatis nec tortor. Aliquam erat volutpat. Duis facilisis hendrerit nisl id imperdiet. Proin neque neque, malesuada a luctus non, cursus a quam. Quisque eleifend facilisis cursus. Nulla non laoreet nunc, a maximus nibh. Praesent vehicula tempor massa. Integer scelerisque enim ac leo venenatis interdum."
+  content: "Description 2"
   price: "99.99"
-  user_id: one
-  category_id: two
+  user_id: 1
+  category_id: 2
 three:
+  id: 3
   title: "Article 3"
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu efficitur mauris, eget mollis quam. Maecenas nec erat ut nisi aliquam semper nec sit amet ex. Nulla facilisi. Nam pretium tellus id ex feugiat, id convallis sapien laoreet. Nam sed varius lorem. Vestibulum ultrices laoreet tempus. Vestibulum blandit tortor ut feugiat sagittis. Integer tempor mauris id fermentum venenatis. Sed finibus, arcu in consequat tempus, leo risus imperdiet quam, in hendrerit augue nunc eu magna. Sed laoreet egestas elit, vitae rhoncus augue fermentum id. Aenean sodales lectus sit amet varius aliquet. Sed convallis imperdiet mi vel congue.
-  Mauris a posuere ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam in est quis risus pretium condimentum vestibulum non leo. Vivamus est elit, aliquam quis vestibulum eget, venenatis nec tortor. Aliquam erat volutpat. Duis facilisis hendrerit nisl id imperdiet. Proin neque neque, malesuada a luctus non, cursus a quam. Quisque eleifend facilisis cursus. Nulla non laoreet nunc, a maximus nibh. Praesent vehicula tempor massa. Integer scelerisque enim ac leo venenatis interdum."
+  content: "Description 3"
   price: "99.99"
-  user_id: one
-  category_id: two
+  user_id: 1
+  category_id: 3
