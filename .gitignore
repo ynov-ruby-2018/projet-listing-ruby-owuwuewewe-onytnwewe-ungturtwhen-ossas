@@ -85,3 +85,4 @@ config/database.yml
 Gemfile
 /.idea/*
 .idea/*
+\.idea/

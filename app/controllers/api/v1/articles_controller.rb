@@ -6,7 +6,6 @@ class Api::V1::ArticlesController < Api::V1::ApiController
   # GET /articles
   def index
     @articles = Article.all
-    render json: @articles
   end
 
   # GET /articles/1
