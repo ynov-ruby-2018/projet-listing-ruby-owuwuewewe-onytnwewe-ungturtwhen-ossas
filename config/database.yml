@@ -41,8 +41,8 @@ production:
   adapter: mysql2
   encoding: utf8
   database: rubyaqdg_ruby
-  username: ruby
-  password: ruby
+  username: rubyaqdg_ruby
+  password: tRh8QPE4wkn9KCJxrS
   host: 127.0.0.1
   port: 3306
 

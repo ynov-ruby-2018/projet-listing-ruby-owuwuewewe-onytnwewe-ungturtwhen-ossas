@@ -35,6 +35,7 @@ gem 'devise'
 gem 'rails_admin'
 # gem for translate website
 gem 'route_translator'
+gem 'bigdecimal'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
