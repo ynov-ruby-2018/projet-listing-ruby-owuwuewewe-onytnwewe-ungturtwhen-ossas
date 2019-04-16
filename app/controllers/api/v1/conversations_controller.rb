@@ -12,7 +12,7 @@ class Api::V1::ConversationsController < Api::V1::ApiController
 
   def create
     before_action :authenticate_user!
-    
+
     if Conversation.between(params[:sender_id], params[:receiver_id], params[:article_id]).present?
       @conversation = Conversation.between(params[:sender_id], params[:receiver_id], params[:article_id]).first
 

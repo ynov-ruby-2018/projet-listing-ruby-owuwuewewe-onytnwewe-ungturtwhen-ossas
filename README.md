@@ -29,26 +29,39 @@ Ruby
 **Routes**
 Articles API
 ```
-GET    /api/v1/articles
-GET    /api/v1/articles/:id
-POST   /api/v1/articles 
-PATCH  /api/v1/articles/:id                                                           
-PUT    /api/v1/articles/:id 
-DELETE /api/v1/articles/:id
+GET    /api/v1/articles(.:format)                                                           
+POST   /api/v1/articles(.:format)                                                           
+GET    /api/v1/articles/new(.:format)                                                       
+GET    /api/v1/articles/:id/edit(.:format)                                                  
+GET    /api/v1/articles/:id(.:format)                                                       
+PATCH  /api/v1/articles/:id(.:format)                                                       
+PUT    /api/v1/articles/:id(.:format)                                                       
+DELETE /api/v1/articles/:id(.:format)                                                       
 ```
+****
+**Routes**
+Conversation API
+```
+GET    /api/v1/conversations(.:format)                                                      
+POST   /api/v1/conversations(.:format) 
+```
+****
+**Routes**
+Messages API
+```
+GET    /api/v1/conversations/:conversation_id/messages(.:format)                                
+POST   /api/v1/conversations/:conversation_id/messages(.:format) 
+```
+****
 **Routes**
 Users API
 ```
-GET    /api/users/sign_in
-POST   /api/users/sign_in(.:format)
-DELETE /api/users/sign_out(.:format)
-GET    /api/users/password/new(.:format)                        
-PATCH  /api/users/password(.:format)                            
-PUT    /api/users/password(.:format)                            
-POST   /api/users/password(.:format)                            
-PATCH  /api/users(.:format)                                     
-PUT    /api/users(.:format)                                     
-DELETE /api/users(.:format)                                     
-POST   /api/users(.:format)                                     
-
+GET    /api/v1/users(.:format)                                                              
+POST   /api/v1/users(.:format)                                                              
+GET    /api/v1/users/new(.:format)                                                          
+GET    /api/v1/users/:id/edit(.:format)                                                     
+GET    /api/v1/users/:id(.:format)                                                          
+PATCH  /api/v1/users/:id(.:format)                                                          
+PUT    /api/v1/users/:id(.:format)                                                          
+DELETE /api/v1/users/:id(.:format)                                   
 ```
