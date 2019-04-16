@@ -13,8 +13,6 @@ class Api::V1::MessagesController < Api::V1::ApiController
     @messages.where("user_id != ? AND read = ?", current_user.id, false).update_all(read: true)
 
     @message = @conversation.messages.new
-
-    render json: @message
   end
 
   def create

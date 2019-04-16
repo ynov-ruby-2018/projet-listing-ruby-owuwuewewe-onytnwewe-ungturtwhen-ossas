@@ -1,8 +1,6 @@
 class Api::V1::ArticlesController < Api::V1::ApiController
 
 
-
-  before_action :set_article, only: [:show, :update, :destroy]
   # GET /articles
   def index
     @articles = Article.all
@@ -28,7 +26,7 @@ class Api::V1::ArticlesController < Api::V1::ApiController
   def update
     before_action :authenticate_user!
     if @article.update(article_params)
-      render json: @article
+      render json: @article, status: :update
     else
       render json: @article.errors, status: :unprocessable_entity
     end
@@ -41,11 +39,6 @@ class Api::V1::ArticlesController < Api::V1::ApiController
   end
 
   private
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_article
-    @article = Article.find(params[:id])
-  end
 
   def article_params
     params.require(:article).permit(:title, :content, :price, :user_id, :category_id)

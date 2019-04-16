@@ -25,7 +25,7 @@ class Api::V1::CategoryController < Api::V1::ApiController
   def update
     before_action :authenticate_user!
     if @category.update(article_params)
-      render json: @category
+      render json: @category , status: :update
     else
       render json: @category.errors, status: :unprocessable_entity
     end
@@ -38,11 +38,6 @@ class Api::V1::CategoryController < Api::V1::ApiController
   end
 
   private
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_article
-    @category = Category.find(params[:id])
-  end
 
   def category_params
     params.require(:category).permit(:name)
