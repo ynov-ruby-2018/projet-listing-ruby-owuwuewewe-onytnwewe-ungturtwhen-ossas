@@ -5,6 +5,7 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
+  id: 1
   email: admin@domaine.com
   firstname: admin
   lastname: domaine
@@ -12,6 +13,7 @@ one:
   is_admin: true
 
 two:
+  id: 2
   email: user@domaine.com
   firstname: user
   lastname: domaine
