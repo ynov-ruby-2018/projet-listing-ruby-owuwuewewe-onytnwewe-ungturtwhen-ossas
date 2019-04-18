@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_082043) do
   create_table "conversations", options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.integer "sender_id"
     t.integer "receiver_id"
+    t.integer "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
