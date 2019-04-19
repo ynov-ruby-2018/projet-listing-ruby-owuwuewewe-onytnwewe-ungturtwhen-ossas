@@ -7,8 +7,12 @@
           <img src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fwww.2Egeo.2Efr.2Fvar.2Fgeo.2Fstorage.2Fimages.2Fmedia.2Fimages.2Ffond-d-ecran-gratuit-mer-falaises-d-etretat-en-normandie.2F1704066-1-fre-FR.2Ffond-d-ecran-gratuit-mer-falaises-d-etretat-en-normandie.2Ejpg/620x465/quality/65/fond-d-ecran-gratuit-mer-falaises-d-etretat-en-normandie.jpg">
           <% if current_user.nil? %>
           <% else %>
-            <%= link_to  account_conversations_path(sender_id: current_user.id, receiver_id: article.user.id, article_id: article.id), method: :post, :class => "btn-floating halfway-fab waves-effect waves-light red" do%>
-              <i class="material-icons">message</i>
+            <% if current_user.id === article.user.id%>
+
+                <% else %>
+              <%= link_to  account_conversations_path(sender_id: current_user.id, receiver_id: article.user.id, article_id: article.id), method: :post, :class => "btn-floating halfway-fab waves-effect waves-light red" do%>
+                <i class="material-icons">message</i>
+              <% end  %>
             <% end %>
             <% end %>
           <span class="card-title"><%= article.title%></span>
