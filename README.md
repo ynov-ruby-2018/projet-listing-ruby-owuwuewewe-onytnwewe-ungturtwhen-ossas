@@ -1,5 +1,17 @@
 # README
+
+## Groupe owuwuewewe-onytnwewe-ungturtwhen-ossas
+
+* Baptiste DUMONT baptiste.dumont@ynov.com 
+* Benjamin L'HONNEN benjamin.lhonnen@ynov.com 
+
 https://www.youtube.com/watch?v=VG2WOZx4FVE
+
+##Url de production
+
+http://ruby.lhonnenbenjamin.fr/
+
+##
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -7,23 +19,35 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+     * 2.4.4
 
 * System dependencies
+     * gem install bundle
+     * bundle install
 
 * Configuration
+     * Database Mysql
+    
 
 * Database creation
 
 * Database initialization
+     * rake db:migrate
+     * rake db:fixtures:load
 
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+     * gem install bundle
+     * bundle install
+     * rake db:migrate
+     * rake db:fixtures:load
 
 # ListingRuby
-Ruby
+Projet de ruby, 
+Copie le principe du site LeBonCoin.
 
 # ListingRuby - API
 **Routes**
