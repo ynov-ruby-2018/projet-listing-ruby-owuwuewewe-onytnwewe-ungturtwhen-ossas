@@ -30,7 +30,7 @@ Things you may want to cover:
     
 
 * Database creation
-
+    * rake db:create
 * Database initialization
      * rake db:migrate
      * rake db:fixtures:load
