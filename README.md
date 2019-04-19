@@ -45,6 +45,10 @@ Things you may want to cover:
      * rake db:migrate
      * rake db:fixtures:load
 
+* User test
+     * Email : admin@domaine.com    Password : 123Pass123
+     * Email : user@domaine.com     Password : 123Pass123
+
 # ListingRuby
 Projet de ruby, 
 Copie le principe du site LeBonCoin.
