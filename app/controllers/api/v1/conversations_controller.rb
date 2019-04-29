@@ -2,12 +2,14 @@ class Api::V1::ConversationsController < Api::V1::ApiController
 
 
   def index
-    @users = User.where.not(id: current_user.id)
-    @conversations = Conversation.where("sender_id = ? OR receiver_id = ?", current_user.id, current_user.id)
+    authorization_object = Authorization.new(request)
+    current_user = authorization_object.current_user
+
+    @users = User.where.not(id: current_user)
+    @conversations = Conversation.where("sender_id = ? OR receiver_id = ?", current_user, current_user)
   end
 
   def create
-    before_action :authenticate_user!
 
     if Conversation.between(params[:sender_id], params[:receiver_id], params[:article_id]).present?
       @conversation = Conversation.between(params[:sender_id], params[:receiver_id], params[:article_id]).first
