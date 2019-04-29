@@ -55,6 +55,9 @@ Copie le principe du site LeBonCoin.
 
 # ListingRuby - API
 **Routes**
+Génération du token http://localhost:3000/api/v1/auth/login
+****
+**Routes**
 Articles API
 ```
 GET    /api/v1/articles(.:format)                                                           

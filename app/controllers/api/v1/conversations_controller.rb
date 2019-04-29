@@ -2,8 +2,7 @@ class Api::V1::ConversationsController < Api::V1::ApiController
 
 
   def index
-    authorization_object = Authorization.new(request)
-    current_user = authorization_object.current_user
+
 
     @users = User.where.not(id: current_user)
     @conversations = Conversation.where("sender_id = ? OR receiver_id = ?", current_user, current_user)
