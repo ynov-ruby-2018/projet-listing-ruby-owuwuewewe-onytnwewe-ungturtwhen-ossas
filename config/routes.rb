@@ -5,9 +5,7 @@ Rails.application.routes.draw do
       resources :articles
       resources :category
       resources :users
-      devise_scope :user do
-        post '/authentication_tokens/create', to: "authentication_tokens#create"
-      end
+      post '/auth/login', to: 'authentication#login'
       resources :conversations, only: [:index, :create] do
         resources :messages, only: [:index, :create]
       end
