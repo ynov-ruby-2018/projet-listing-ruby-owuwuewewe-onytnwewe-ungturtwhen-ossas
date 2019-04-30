@@ -2,8 +2,6 @@ class Article < ApplicationRecord
   belongs_to :user
   belongs_to :category
 
-  has_one_attached :picture
-
   def self.search(search)
     if search
       article = Article.find_by(title: search)
